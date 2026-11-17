@@ -58,16 +58,22 @@ Pour réindexer après avoir changé les documents, supprimez la collection :
 
 ## Évaluation
 
-Un jeu de questions de référence (`eval/questions.json`) est évalué avec Ragas,
-avec un modèle Ollama local comme juge :
+Le RAG est évalué avec Ragas sur un corpus **fictif** (`eval/corpus/`) :
+un guide RH en Markdown et une procédure d'astreinte en **PDF scanné**, pour tester aussi l'OCR.
+Le jeu de référence (`eval/questions.json`) contient 12 questions : des faits simples, des faits
+qui n'existent que dans le scan, une question qui croise les deux documents, et une question
+hors corpus pour vérifier que le modèle n'invente pas de réponse.
 
 ```bash
-pip install -r requirements-eval.txt
-QDRANT_HOST=http://localhost:6333 OLLAMA_HOST=http://localhost:11434 python eval/run_ragas.py
+pip install -r requirements-eval.txt     # Python 3.11
+docker compose up -d qdrant
+ollama pull qwen2.5:7b                   # modèle juge
+python eval/run_ragas.py
 ```
 
-Métriques : *faithfulness* (réponse fondée sur les passages), *response relevancy*,
+Métriques : *faithfulness* (réponse fondée sur les passages), *answer relevancy*,
 *context precision* et *context recall* (qualité du retrieval).
+Derniers résultats : [`eval/RESULTS.md`](eval/RESULTS.md).
 
 ## Choix et limites assumés
 

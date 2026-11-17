@@ -12,8 +12,8 @@ LLM_MODEL = os.getenv("LLM_MODEL", "qwen2.5:3b")
 Settings.llm = Ollama(model=LLM_MODEL, base_url=OLLAMA_URL, request_timeout=600.0)
 Settings.embed_model = OllamaEmbedding(model_name="nomic-embed-text", base_url=OLLAMA_URL, request_timeout=600.0, embed_batch_size=1)
 
-DOCUMENTS_DIR = "./documents"
-COLLECTION_NAME = "local_rag"
+DOCUMENTS_DIR = os.getenv("DOCUMENTS_DIR", "./documents")
+COLLECTION_NAME = os.getenv("COLLECTION_NAME", "local_rag")
 
 # 2. Connexion à Qdrant
 def get_qdrant_client():

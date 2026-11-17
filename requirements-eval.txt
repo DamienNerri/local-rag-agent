@@ -1,4 +1,9 @@
 -r requirements.txt
 ragas==0.2.15
-langchain-ollama
+# ragas 0.2.x n'est pas compatible avec langchain 1.x
+langchain>=0.3,<0.4
+langchain-core>=0.3,<0.4
+langchain-community>=0.3,<0.4
+langchain-openai>=0.3,<0.4
+langchain-ollama>=0.3,<0.4
 pandas

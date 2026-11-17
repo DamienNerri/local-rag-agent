@@ -1,10 +1,26 @@
 [
-  {
-    "question": "À REMPLACER : une question dont la réponse se trouve dans vos documents",
-    "reference": "À REMPLACER : la réponse attendue, rédigée à la main à partir du document"
-  },
-  {
-    "question": "À REMPLACER : une deuxième question (visez une dizaine au total)",
-    "reference": "À REMPLACER : réponse de référence"
-  }
+  {"question": "Combien de jours de télétravail par semaine un salarié peut-il prendre ?",
+   "reference": "Jusqu'à 2 jours de télétravail par semaine, après la fin de la période d'essai."},
+  {"question": "Quel jour la présence au bureau est-elle obligatoire ?",
+   "reference": "Le mardi est un jour de présence obligatoire pour toutes les équipes."},
+  {"question": "Quel est le montant de l'indemnité de télétravail ?",
+   "reference": "2,70 € par jour télétravaillé, dans la limite de 40 € par mois, versés avec le salaire du mois suivant."},
+  {"question": "Combien de jours de congés et de RTT ont les salariés ?",
+   "reference": "25 jours ouvrés de congés payés par an et 12 jours de RTT."},
+  {"question": "Quel est le plafond de remboursement pour une nuit d'hôtel à Lyon ?",
+   "reference": "85 € par nuit, car le plafond de 110 € ne s'applique qu'à Paris."},
+  {"question": "Quand a lieu la journée d'intégration des nouveaux arrivants ?",
+   "reference": "Le premier jeudi de chaque mois au siège de Nantes, avec une visite de la centrale pilote de Rezé."},
+  {"question": "Quelle prime reçoit un technicien pour une semaine d'astreinte ?",
+   "reference": "Une prime forfaitaire de 180 euros par semaine d'astreinte, plus une récupération de 1,5 fois le temps passé pour les interventions de nuit ou de week-end."},
+  {"question": "Quel est le délai d'intervention sur site pour un incident P1 ?",
+   "reference": "Pour un incident P1, la prise en charge se fait sous 30 minutes et l'intervention sur site sous 4 heures."},
+  {"question": "À partir de quelle perte de production un incident est-il classé P2 ?",
+   "reference": "Un incident est P2 en cas de perte de production partielle supérieure à 20 %."},
+  {"question": "Qui faut-il prévenir si un incident P1 n'est pas résolu au bout de 2 heures ?",
+   "reference": "Le responsable d'exploitation, Mme Léa Garnier, via le numéro d'escalade 02 40 00 00 00."},
+  {"question": "Dans quel outil sont publiés le planning d'astreinte et les demandes de télétravail ?",
+   "reference": "Dans l'outil RH Solaris : le planning d'astreinte y est publié 6 semaines à l'avance et les demandes de télétravail s'y font au plus tard le vendredi précédent."},
+  {"question": "Quel est le chiffre d'affaires annuel d'Hélioria Énergies ?",
+   "reference": "Les documents ne mentionnent pas le chiffre d'affaires d'Hélioria Énergies."}
 ]
