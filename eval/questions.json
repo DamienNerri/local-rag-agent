@@ -1,0 +1,10 @@
+[
+  {
+    "question": "À REMPLACER : une question dont la réponse se trouve dans vos documents",
+    "reference": "À REMPLACER : la réponse attendue, rédigée à la main à partir du document"
+  },
+  {
+    "question": "À REMPLACER : une deuxième question (visez une dizaine au total)",
+    "reference": "À REMPLACER : réponse de référence"
+  }
+]

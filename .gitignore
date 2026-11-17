@@ -1,0 +1,14 @@
+# Données locales : ne jamais versionner (contiennent le texte des documents indexés)
+documents/
+qdrant_storage/
+eval/results*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# IDE
+.idea/
+.DS_Store

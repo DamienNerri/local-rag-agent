@@ -1,0 +1,8 @@
+llama-index
+llama-index-vector-stores-qdrant
+llama-index-embeddings-ollama
+llama-index-llms-ollama
+qdrant-client
+requests
+pytesseract
+pdf2image
