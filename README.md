@@ -75,6 +75,28 @@ Métriques : *faithfulness* (réponse fondée sur les passages), *answer relevan
 *context precision* et *context recall* (qualité du retrieval).
 Derniers résultats : [`eval/RESULTS.md`](eval/RESULTS.md).
 
+**Lecture des résultats** (`qwen2.5:3b`, juge `qwen2.5:7b`) :
+
+| Métrique | Score |
+|---|---|
+| faithfulness | 0.89 |
+| answer relevancy | 0.51 |
+| context precision | 0.92 |
+| context recall | 0.92 |
+
+- Relues à la main, les 11 réponses attendues sont justes, y compris celles issues du PDF
+  scanné. Sur la question hors corpus, le modèle dit qu'il n'a pas l'information au lieu
+  d'inventer.
+- Le 0 en *faithfulness* sur « délai P1 » vient du juge : la réponse « 4 heures » est juste
+  mais trop courte pour qu'il en extraie une affirmation à vérifier.
+- *Answer relevancy* est bas sur toutes les questions : la métrique compare par embeddings des
+  questions régénérées depuis la réponse, ce qui pénalise le français avec `nomic-embed-text`.
+  À recalibrer avec un modèle d'embedding multilingue avant d'en tirer des conclusions.
+- **Limite connue** : le corpus ne fait que 3 chunks pour un `top_k` de 3. Le retrieval renvoie
+  donc tout le corpus, et les scores de contexte ne mesurent pas encore vraiment la
+  qualité de la recherche. Prochaine étape : un corpus plus grand, avec des documents
+  distracteurs.
+
 ## Choix et limites assumés
 
 - **Modèle de 3B paramètres** : choisi pour tourner sur un PC sans gros GPU. En production,
